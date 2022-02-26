@@ -1,0 +1,21 @@
+module:
+    _target_: csip.models.DualEncoders
+    backbone: resnet18
+    proj_dim: 128
+    num_channels_a: 3
+    num_channels_b: 1
+    pretrained: True
+
+datamodule:
+    _target_: csip.datasets.OverheadGeoposeSSLDataModule
+    root: /mnt/e/data/overhead_geopose/train/
+    batch_size: 4
+    num_workers: 4
+    num_prefetch: 2
+    patch_size: 512
+
+trainer:
+    max_epochs: 100
+    precision: 16
+    gpus: 1
+    log_every_n_steps: 25

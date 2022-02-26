@@ -1,0 +1,24 @@
+module:
+    _target_: csip.models.ChangeDetectionModel
+    model: FCSiamDiff
+    backbone: resnet18
+    num_channels: 3
+    num_classes: 5
+    learning_rate: 0.001
+    weights: imagenet
+    freeze_encoder: True
+
+datamodule:
+    _target_: csip.datasets.xView2DataModule
+    root: /mnt/e/data/xview2
+    batch_size: 16
+    num_workers: 4
+    num_prefetch: 2
+    val_split_pct: 0.2
+    patch_size: 512
+
+trainer:
+    max_epochs: 25
+    precision: 16
+    gpus: 1
+    log_every_n_steps: 5
