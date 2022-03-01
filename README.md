@@ -2,7 +2,7 @@
 
 <img src="./assets/architecture.png" width="800px"></img>
 
-This repository contains the code for the paper ["Supervising Remote Sensing Change Detection Models with 3D Surface Semantics", Corley et al. (2022)](assets/SUPERVISING%20REMOTE%20SENSING%20CHANGE%20DETECTION%20MODELS%20WITH%203D%20SURFACE%20SEMANTICS.pdf). In this paper we contrastively train dual encoders (RGB and AGL) to learn 3D surface semantics. We then evaluate the pretrained RGB encoder on several downstream change detection and segmentation tasks. We find that pretraining using our CSIP framework improves performance on downstream tasks where surface and height information is relevant.
+This repository contains the code for the paper ["Supervising Remote Sensing Change Detection Models with 3D Surface Semantics", Corley et al. (2022)](https://arxiv.org/abs/2202.13251). In this paper we contrastively train dual encoders (RGB and AGL) to learn 3D surface semantics. We then evaluate the pretrained RGB encoder on several downstream change detection and segmentation tasks. We find that pretraining using our CSIP framework improves performance on downstream tasks where surface and height information is relevant.
 
 <img src="./assets/results.png" width="800px"></img>
 
